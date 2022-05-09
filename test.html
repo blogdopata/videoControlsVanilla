@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button id="repro"> REPRODUCE 1 </button>
+
+    <button id="repro2"> REPRODUCE 2 </button>
+
+    <button id="repro3"> REPRODUCE 3 </button>
+
+
+
+    <script>
+
+        let  btnRepro = document.getElementById('repro');
+        let btnRepro2 = document.getElementById('repro2');
+        let btnRepro3 = document.getElementById('repro3');
+
+        const audio1 = new Audio('audio/audio1.ogg');
+        const audio2 =  new Audio('audio/audio2.ogg');
+        const audio3 =  new Audio('audio/audio3.ogg');
+
+       /*  console.log(btnRepro) 
+        console.log(btnRepro2) */
+
+        btnRepro.addEventListener('click', btnAudio1);
+        btnRepro2.addEventListener('click', btnAudio2);
+        btnRepro3.addEventListener('click',btnAudio3 );
+
+        function btnAudio1(){
+            console.log("reproduce 1 ") ;
+            console.log("Pausea | audio 2 y audio 3 ") ;
+            audio2.pause();
+            audio3.pause();
+            audio1.play();
+
+       
+        }
+
+      
+
+        function btnAudio2(){
+            console.log("reproduce 2")
+            console.log("Pausea | audio 1 y audio 3 ") ;
+         
+
+           // btnAudio1Stop();
+           audio1.pause();
+           audio3.pause()
+
+            audio2.play();
+         
+        }
+
+        function btnAudio3(){
+            console.log("Reproduce 3 ") ;
+            console.log("Pausea | audio 1 y audio 2 ") ;
+            audio1.pause();
+            audio2.pause();
+            audio3.play();
+        }
+
+
+
+    </script>
+</body>
+</html>
